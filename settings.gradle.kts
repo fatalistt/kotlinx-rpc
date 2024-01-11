@@ -36,6 +36,8 @@ include(":krpc-utils:krpc-utils-service-loader")
 
 include(":krpc-compiler-plugin")
 include(":krpc-ksp-plugin")
+include(":krpc-protobuf-plugin")
+include(":krpc-protobuf-plugin:plugin-test")
 
 include(":krpc-runtime")
 include(":krpc-runtime:krpc-runtime-api")

@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.krpc) apply false
     alias(libs.plugins.atomicfu) apply false
     alias(libs.plugins.detekt) apply false
+    id("com.google.protobuf") version "0.9.4" apply false
     alias(libs.plugins.binary.compatibility.validator)
 }
 
