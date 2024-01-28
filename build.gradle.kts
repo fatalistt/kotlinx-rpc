@@ -33,6 +33,8 @@ apiValidation {
             "krpc-utils",
             "krpc-utils-service-loader",
             "krpc-ksp-plugin",
+            "krpc-protobuf-plugin",
+            "plugin-test", // protobuf
         ) + compilerPluginModules
     )
 

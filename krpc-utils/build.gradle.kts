@@ -16,6 +16,12 @@ kotlin {
                 api(project(":krpc-runtime:krpc-runtime-api"))
             }
         }
+
+        val jvmMain by getting {
+            dependencies {
+                implementation(libs.slf4j.simple)
+            }
+        }
     }
 
     explicitApi = ExplicitApiMode.Disabled

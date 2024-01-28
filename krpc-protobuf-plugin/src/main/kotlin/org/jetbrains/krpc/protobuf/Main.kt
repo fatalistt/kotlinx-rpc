@@ -9,7 +9,7 @@ import com.google.protobuf.compiler.PluginProtos
 fun main() {
     val inputBytes = System.`in`.readBytes()
     val request = PluginProtos.CodeGeneratorRequest.parseFrom(inputBytes)
-    val plugin = KRPCProtobufPlugin(request)
-    val output: PluginProtos.CodeGeneratorResponse = plugin.generate()
+    val plugin = KRPCProtobufPlugin()
+    val output: PluginProtos.CodeGeneratorResponse = plugin.generate(request)
     output.writeTo(System.out)
 }

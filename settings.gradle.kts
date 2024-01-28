@@ -51,6 +51,8 @@ include(":krpc-runtime:krpc-runtime-serialization:krpc-runtime-serialization-jso
 include(":krpc-runtime:krpc-runtime-serialization:krpc-runtime-serialization-cbor")
 include(":krpc-runtime:krpc-runtime-serialization:krpc-runtime-serialization-protobuf")
 
+include(":krpc-transport:krpc-transport-grpc")
+
 include(":krpc-transport:krpc-transport-ktor")
 include(":krpc-transport:krpc-transport-ktor:krpc-transport-ktor-server")
 include(":krpc-transport:krpc-transport-ktor:krpc-transport-ktor-client")
