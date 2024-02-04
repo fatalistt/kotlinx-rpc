@@ -60,7 +60,7 @@ open class CodeGenerator(
         _append("$indent${value ?: ""}", newLineIfAbsent = true)
     }
 
-    private fun newLine() {
+    fun newLine() {
         _append(newLineBefore = true)
     }
 
@@ -107,7 +107,7 @@ open class CodeGenerator(
         }
     }
 
-    enum class Declaration(val strValue: String) {
+    enum class DeclarationType(val strValue: String) {
         Class("class"), Interface("interface"), Object("object");
     }
 
@@ -117,7 +117,7 @@ open class CodeGenerator(
         constructorArgs: List<String> = emptyList(),
         superTypes: List<String> = emptyList(),
         annotations: List<String> = emptyList(),
-        declaration: Declaration = Declaration.Class,
+        declarationType: DeclarationType = DeclarationType.Class,
         block: (CodeGenerator.() -> Unit)? = null,
     ) {
         for (annotation in annotations) {
@@ -126,7 +126,7 @@ open class CodeGenerator(
 
         val modifiersString = if (modifiers.isEmpty()) "" else "$modifiers "
 
-        val firstLine = "$modifiersString${declaration.strValue} $name"
+        val firstLine = "$modifiersString${declarationType.strValue} $name"
         addLine(firstLine)
 
         val shouldPutArgsOnNewLines =
