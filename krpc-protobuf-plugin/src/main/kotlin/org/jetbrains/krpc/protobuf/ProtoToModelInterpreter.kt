@@ -52,6 +52,7 @@ class ProtoToModelInterpreter(
     }
 
     private fun kotlinPackageName(originalPackage: String, options: DescriptorProtos.FileOptions): String {
+        // todo check forbidden package names
         return originalPackage
     }
 
